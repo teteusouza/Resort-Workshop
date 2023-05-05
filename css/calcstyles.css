@@ -1,0 +1,40 @@
+* {
+    font-size: 99.5%;
+} 
+
+#back {
+    margin-left: 20px;
+    margin-top: 20px;
+    color:rgb(255, 255, 255);
+}
+
+body {
+    background-color:rgb(207, 238, 246);
+}
+
+body {
+    background-image: url("../images/lake.png");
+    width: 200%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 50px;
+    margin-right: 50px;
+    max-width: 400px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    color:aliceblue;
+    font-size: 50px;
+    margin-left: 100px;
+    margin-top: 350px;
+  }

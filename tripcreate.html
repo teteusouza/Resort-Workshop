@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Overnight Cost Estimator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/calcstyles.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div>
+        <a id="back" href="index.html">Back to home</a>
+    </div>
+    <div>
+        <h1>Overnight Stay Calculator</h1>
+    </div>
+    <div class="container mt-4">
+        <div class="card float-right" style="width: 50rem;">
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="form-group">
+                <label for="checkin-date">Check-in date:</label>
+                <input type="date" class="form-control" id="checkin-date" required>
+              </div>
+              <div class="form-group">
+                <label for="nights">Number of nights:</label>
+                <input type="number" class="form-control" id="nights" min="1" max="28" required>
+              </div>
+              <div class="form-group">
+                <label>Room type:</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="room-type" id="queen" value="queen" required>
+                  <label class="form-check-label" for="queen">
+                    Queen
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="room-type" id="king" value="king">
+                  <label class="form-check-label" for="king">
+                    King
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="room-type" id="2bedsuite" value="2bedsuite">
+                  <label class="form-check-label" for="2bedsuite">
+                    2-Bedroom Suite
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="adults">Number of adults:</label>
+                <input type="number" class="form-control" id="adults" min="1" max="4" required>
+              </div>
+              <div class="form-group">
+                <label for="kids">Number of kids:</label>
+                <input type="number" class="form-control" id="kids" min="0" max="4" required>
+              </div>
+              <div class="form-group">
+                <label>Discount:</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="discountRadios" id="none" value="none" required>
+                  <label class="form-check-label" for="none">
+                    None
+                  </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="discountRadios" id="aaaSeniorRadio" value="aaaSenior">
+                    <label class="form-check-label" for="aaaSeniorRadio">
+                      AAA/Senior (10%)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="discountRadios" id="militaryRadio" value="military">
+                <label class="form-check-label" for="militaryRadio">
+                  Military (20%)
+                </label>
+              </div>
+              <br>
+              <button type="button" id="calculate-btn" class="btn btn-primary" onclick="calculateCost()">Calculate Total Cost</button>
+              <div id="result"></div>
+            </form>
+          </div>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>
+    
